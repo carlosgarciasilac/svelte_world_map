@@ -93,6 +93,11 @@
 	import Ne from './countries/ne.svelte';
 	import Dk from './countries/dk.svelte';
 	import Mm from './countries/mm.svelte';
+	import Sv from './countries/sv.svelte';
+	import Gy from './countries/gy.svelte';
+	import Be from './countries/be.svelte';
+	import Us from './countries/us.svelte';
+	import Gq from './countries/gq.svelte';
 
 	const dispatch = createEventDispatcher<{
 		countryselect: { id: string; name: string };
@@ -378,6 +383,12 @@
 		<Ba></Ba>
 		<In></In>
 		<Ca></Ca>
+		<Sv></Sv>
+		<Gy></Gy>
+		<Be></Be>
+		<Gq></Gq>
+
+		<Us></Us>
 	</svg>
 </div>
 
