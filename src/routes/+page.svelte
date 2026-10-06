@@ -1,22 +1,53 @@
 <script lang="ts">
 	import { countries, formatGdp } from '$lib/country-gdp';
+	import polioEradicationData from '$lib/polio_eradication_data.json';
 	import World from '$lib/world.svelte';
+
+	type CountrySelectDetail = {
+		id: string;
+		name: string;
+	};
+
+	const polioByCountry = polioEradicationData as Record<string, string | null>;
+	const POLIO_NAME_ALIASES: Record<string, string> = {
+		'United Kingdom': 'The United Kingdom',
+		'Congo': 'Republic of Congo',
+		'Macedonia': 'Macedonia'
+	};
 
 	let selectedId = $state<string | null>(null);
 	const activeCountry = $derived(countries.find((country) => country.id === selectedId) ?? null);
+	const activePolioStatus = $derived(activeCountry ? getPolioStatus(activeCountry.name) : null);
 
-	function getCountryFill(gdp: number): string {
-		if (gdp <= 0) {
-			return '#94a3b8';
+	function getPolioStatus(countryName: string): string {
+		const lookupName = POLIO_NAME_ALIASES[countryName] ?? countryName;
+		const value = polioByCountry[lookupName];
+
+		if (value === null || value === undefined) {
+			return 'No eradication year available';
 		}
 
-		const ratio = Math.min(gdp / 15_000_000_000_000, 1);
-		const hue = 210 - ratio * 150;
-		return `hsl(${hue} 82% 62%)`;
+		if (value === 'ongoing') {
+			return 'Eradication is ongoing';
+		}
+
+		if (value === 'data not available' || value === 'data_not_available') {
+			return 'Eradication year not available';
+		}
+
+		if (value === 'pre 1985') {
+			return 'Eradicated before 1985';
+		}
+
+		return `Eradicated in ${value}`;
 	}
 
 	function toggleCountry(countryId: string) {
 		selectedId = selectedId === countryId ? null : countryId;
+	}
+
+	function handleCountrySelect(event: CustomEvent<CountrySelectDetail>) {
+		toggleCountry(event.detail.id);
 	}
 </script>
 
@@ -32,7 +63,7 @@
 
 	<div class="layout">
 		<div class="map-panel">
-			<World></World>
+			<World on:countryselect={handleCountrySelect}></World>
 		</div>
 
 		<aside class="sidebar">
@@ -43,10 +74,11 @@
 					<h3>{activeCountry.name}</h3>
 					<p class="gdp">{formatGdp(activeCountry.gdp)}</p>
 					<p class="note">2010 nominal GDP</p>
+					<p class="polio-status">{activePolioStatus}</p>
 				</div>
 			{:else}
 				<div class="country-card empty">
-					<p>Click any country to reveal its 2010 GDP.</p>
+					<p>Click any country to reveal its 2010 GDP and polio eradication status.</p>
 				</div>
 			{/if}
 		</aside>
@@ -106,26 +138,11 @@
 		padding: 1rem;
 	}
 
-	svg {
+	:global(svg) {
 		display: block;
 		width: 100%;
 		height: auto;
 		border-radius: 1rem;
-	}
-
-	.country {
-		cursor: pointer;
-		transition: fill 0.18s ease, stroke 0.18s ease, filter 0.18s ease;
-	}
-
-	.country:hover,
-	.country:focus-visible {
-		filter: brightness(1.08);
-		outline: none;
-	}
-
-	.selected {
-		filter: brightness(1.18) saturate(1.2);
 	}
 
 	.sidebar {
@@ -169,6 +186,12 @@
 	.note {
 		margin: 0.45rem 0 0;
 		color: #94a3b8;
+	}
+
+	.polio-status {
+		margin: 0.9rem 0 0;
+		font-size: 0.98rem;
+		color: #bae6fd;
 	}
 
 	.empty {

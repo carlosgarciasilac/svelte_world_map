@@ -1,4 +1,7 @@
-<script>
+<script lang="ts">
+	import { createEventDispatcher } from 'svelte';
+	import { normalizeCountryId } from './country-gdp';
+
 	import Ocean from './countries/ocean.svelte';
 	import Sd from './countries/sd.svelte';
 	import Ss from './countries/ss.svelte';
@@ -90,10 +93,56 @@
 	import Ne from './countries/ne.svelte';
 	import Dk from './countries/dk.svelte';
 	import Mm from './countries/mm.svelte';
+
+	const dispatch = createEventDispatcher<{
+		countryselect: { id: string; name: string };
+	}>();
+
+	function emitCountrySelection(target: EventTarget | null) {
+		if (!(target instanceof Element)) {
+			return;
+		}
+
+		const countryGroup = target.closest('g[id]');
+		if (!(countryGroup instanceof SVGGElement)) {
+			return;
+		}
+
+		const title = countryGroup.querySelector('title')?.textContent?.trim();
+		const id = countryGroup.getAttribute('id')?.trim();
+		if (!title || !id) {
+			return;
+		}
+
+		dispatch('countryselect', { id: normalizeCountryId(id), name: title });
+	}
+
+	function handleMapClick(event: MouseEvent) {
+		emitCountrySelection(event.target);
+	}
+
+	function handleMapKeydown(event: KeyboardEvent) {
+		if (event.key !== 'Enter' && event.key !== ' ') {
+			return;
+		}
+
+		event.preventDefault();
+		emitCountrySelection(event.target);
+	}
 </script>
 
 <div>
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2754" height="1398">
+	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		version="1.1"
+		width="2754"
+		height="1398"
+		role="application"
+		aria-label="World map"
+		onclick={handleMapClick}
+		onkeydown={handleMapKeydown}
+	>
 		<title>World Map</title>
 		<style id="style_css_sheet" type="text/css">
 			/*

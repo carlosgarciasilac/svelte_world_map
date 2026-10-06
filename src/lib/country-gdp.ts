@@ -61,7 +61,7 @@ const FALLBACK_COUNTRIES: Country[] = [
 	{ id: 'south-africa', name: 'South Africa', gdp: GDP_BY_ID['south-africa'], path: 'M438 312 L470 304 L486 330 L472 356 L440 350 L430 326 Z', x: 456, y: 330, fill: '#93c5fd' },
 ];
 
-function normalizeCountryId(rawId: string): string {
+export function normalizeCountryId(rawId: string): string {
 	const value = rawId.trim().toLowerCase();
 	return SVG_ID_ALIASES[value] ?? value.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
