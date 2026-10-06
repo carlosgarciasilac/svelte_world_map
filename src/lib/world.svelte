@@ -134,10 +134,13 @@
 <div>
 	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 	<svg
+		class="world-map"
 		xmlns="http://www.w3.org/2000/svg"
 		version="1.1"
 		width="2754"
 		height="1398"
+		viewBox="0 0 2754 1398"
+		preserveAspectRatio="xMidYMid meet"
 		role="application"
 		aria-label="World map"
 		onclick={handleMapClick}
@@ -377,3 +380,16 @@
 		<Ca></Ca>
 	</svg>
 </div>
+
+<style>
+	div {
+		width: 100%;
+	}
+
+	.world-map {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+	}
+</style>
