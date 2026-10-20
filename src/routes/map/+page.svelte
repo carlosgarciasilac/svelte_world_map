@@ -1,0 +1,218 @@
+<script lang="ts">
+	import { countries, formatGdp } from '$lib/country-gdp';
+	import polioEradicationData from '$lib/countries-with-polio-2026.json';
+	import World from '$lib/world.svelte';
+
+	type CountrySelectDetail = {
+		id: string;
+		name: string;
+	};
+
+	type PolioCountryRecord = {
+		flagCode: string;
+		country: string;
+		DateCountryDeclaredPolioFree: number | null;
+		WildPoliovirusCasesByCountry_2025: number | null;
+	};
+
+	const polioByCountry = new Map(
+		(polioEradicationData as PolioCountryRecord[]).map((entry) => [entry.country, entry])
+	);
+	const POLIO_NAME_ALIASES: Record<string, string> = {
+		'The United Kingdom': 'United Kingdom',
+		'United Kingdom': 'United Kingdom',
+		'Congo': 'Republic of the Congo',
+		'Republic of Congo': 'Republic of the Congo',
+		'Macedonia': 'North Macedonia',
+		'North Macedonia': 'North Macedonia'
+	};
+
+	let selectedId = $state<string | null>(null);
+	const activeCountry = $derived(countries.find((country) => country.id === selectedId) ?? null);
+	const activePolioStatus = $derived(activeCountry ? getPolioStatus(activeCountry.name) : null);
+
+	function getPolioStatus(countryName: string): string {
+		const lookupName = POLIO_NAME_ALIASES[countryName] ?? countryName;
+		const record = polioByCountry.get(lookupName) ?? null;
+
+		if (record?.WildPoliovirusCasesByCountry_2025 !== null && record?.WildPoliovirusCasesByCountry_2025 !== undefined) {
+			const caseCount = record.WildPoliovirusCasesByCountry_2025;
+			if (caseCount !== null && caseCount > 0) {
+				return 'Eradication is ongoing';
+			}
+		}
+
+		if (record?.DateCountryDeclaredPolioFree === null || record?.DateCountryDeclaredPolioFree === undefined) {
+			return 'No eradication year available';
+		}
+
+		return `Eradicated in ${record.DateCountryDeclaredPolioFree}`;
+	}
+
+	function toggleCountry(countryId: string) {
+		selectedId = selectedId === countryId ? null : countryId;
+	}
+
+	function handleCountrySelect(detail: CountrySelectDetail) {
+		toggleCountry(detail.id);
+	}
+</script>
+
+<svelte:head>
+	<title>World GDP Map</title>
+</svelte:head>
+
+<div class="page">
+	<header class="header">
+		<p class="eyebrow">how are we doing with polio eradication?</p>
+		<h1>Countries and Polio Eradication Status</h1>
+	</header>
+
+	<div class="layout">
+		<div class="map-panel">
+			<World onCountrySelect={handleCountrySelect}></World>
+		</div>
+
+		<aside class="sidebar">
+			<h2>Selected country</h2>
+			{#if activeCountry}
+				<div class="country-card">
+					<span class="label">Country</span>
+					<h3>{activeCountry.name}</h3>
+					{#if activeCountry.gdp !== null}
+						<p class="gdp">{formatGdp(activeCountry.gdp)}</p>
+					{:else}
+						<p class="gdp">GDP not available</p>
+					{/if}
+					<p class="note">2020 nominal GDP</p>
+					<p class="polio-status">{activePolioStatus}</p>
+				</div>
+			{:else}
+				<div class="country-card empty">
+					<p>Click any country to reveal its polio eradication status.</p>
+				</div>
+			{/if}
+		</aside>
+	</div>
+</div>
+
+<style>
+	.page {
+		min-height: 100vh;
+		padding: 2rem;
+		background: radial-gradient(circle at top, #111827 0%, #020817 45%);
+	}
+
+	.header {
+		max-width: 1200px;
+		margin: 0 auto 1.5rem;
+	}
+
+	.eyebrow {
+		margin: 0 0 0.5rem;
+		font-size: 0.75rem;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: #7dd3fc;
+	}
+
+	h1 {
+		margin: 0;
+		font-size: clamp(2rem, 4vw, 3.5rem);
+	}
+
+	.layout {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: minmax(0, 2.2fr) minmax(260px, 0.9fr);
+		gap: 1.5rem;
+		align-items: start;
+	}
+
+	.map-panel,
+	.sidebar {
+		background: rgba(15, 23, 42, 0.9);
+		border: 1px solid rgba(148, 163, 184, 0.2);
+		border-radius: 1.25rem;
+		box-shadow: 0 20px 35px rgba(15, 23, 42, 0.25);
+	}
+
+	.map-panel {
+		padding: 1rem;
+	}
+
+	:global(svg) {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 1rem;
+	}
+
+	.sidebar {
+		padding: 1.25rem;
+	}
+
+	.sidebar h2 {
+		margin-top: 0;
+		font-size: 1.05rem;
+		color: #cbd5e1;
+	}
+
+	.country-card {
+		padding: 1rem;
+		border-radius: 0.9rem;
+		background: rgba(30, 41, 59, 0.9);
+		border: 1px solid rgba(125, 211, 252, 0.25);
+	}
+
+	.label {
+		display: block;
+		font-size: 0.7rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #7dd3fc;
+		margin-bottom: 0.4rem;
+	}
+
+	.country-card h3 {
+		margin: 0 0 0.35rem;
+		font-size: 1.6rem;
+	}
+
+	.gdp {
+		margin: 0;
+		font-size: 1.9rem;
+		font-weight: 700;
+		color: #f8fafc;
+	}
+
+	.note {
+		margin: 0.45rem 0 0;
+		color: #94a3b8;
+	}
+
+	.polio-status {
+		margin: 0.9rem 0 0;
+		font-size: 0.98rem;
+		color: #bae6fd;
+	}
+
+	.empty {
+		min-height: 150px;
+		display: grid;
+		place-items: center;
+		text-align: center;
+		color: #cbd5e1;
+	}
+
+	@media (max-width: 820px) {
+		.page {
+			padding: 1.25rem;
+		}
+
+		.layout {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

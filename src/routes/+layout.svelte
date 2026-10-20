@@ -9,3 +9,12 @@
 </svelte:head>
 
 {@render children()}
+
+<style>
+	:global(body) {
+		margin: 0;
+		font-family: Inter, 'Segoe UI', sans-serif;
+		background: #020817;
+		color: #e2e8f0;
+	}
+</style>
