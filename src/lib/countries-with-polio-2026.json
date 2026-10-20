@@ -1,0 +1,1136 @@
+[
+  {
+    "flagCode": "MW",
+    "country": "Malawi",
+    "DateCountryDeclaredPolioFree": 2025,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BI",
+    "country": "Burundi",
+    "DateCountryDeclaredPolioFree": 2025,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CG",
+    "country": "Republic of the Congo",
+    "DateCountryDeclaredPolioFree": 2025,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "ER",
+    "country": "Eritrea",
+    "DateCountryDeclaredPolioFree": 2025,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BW",
+    "country": "Botswana",
+    "DateCountryDeclaredPolioFree": 2025,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GQ",
+    "country": "Equatorial Guinea",
+    "DateCountryDeclaredPolioFree": 2025,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GB",
+    "country": "United Kingdom",
+    "DateCountryDeclaredPolioFree": 2023,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "NG",
+    "country": "Nigeria",
+    "DateCountryDeclaredPolioFree": 2016,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "IN",
+    "country": "India",
+    "DateCountryDeclaredPolioFree": 2011,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "NE",
+    "country": "Niger",
+    "DateCountryDeclaredPolioFree": 2006,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "EG",
+    "country": "Egypt",
+    "DateCountryDeclaredPolioFree": 2004,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SD",
+    "country": "Sudan",
+    "DateCountryDeclaredPolioFree": 2004,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SO",
+    "country": "Somalia",
+    "DateCountryDeclaredPolioFree": 2002,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "ET",
+    "country": "Ethiopia",
+    "DateCountryDeclaredPolioFree": 2001,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BD",
+    "country": "Bangladesh",
+    "DateCountryDeclaredPolioFree": 2000,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CD",
+    "country": "DR Congo",
+    "DateCountryDeclaredPolioFree": 2000,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "IQ",
+    "country": "Iraq",
+    "DateCountryDeclaredPolioFree": 2000,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GH",
+    "country": "Ghana",
+    "DateCountryDeclaredPolioFree": 2000,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "NP",
+    "country": "Nepal",
+    "DateCountryDeclaredPolioFree": 2000,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "YE",
+    "country": "Yemen",
+    "DateCountryDeclaredPolioFree": 1999,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "ML",
+    "country": "Mali",
+    "DateCountryDeclaredPolioFree": 1999,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GN",
+    "country": "Guinea",
+    "DateCountryDeclaredPolioFree": 1999,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "RW",
+    "country": "Rwanda",
+    "DateCountryDeclaredPolioFree": 1999,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TG",
+    "country": "Togo",
+    "DateCountryDeclaredPolioFree": 1999,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SL",
+    "country": "Sierra Leone",
+    "DateCountryDeclaredPolioFree": 1999,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "LR",
+    "country": "Liberia",
+    "DateCountryDeclaredPolioFree": 1999,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GW",
+    "country": "Guinea-Bissau",
+    "DateCountryDeclaredPolioFree": 1999,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "DJ",
+    "country": "Djibouti",
+    "DateCountryDeclaredPolioFree": 1999,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TR",
+    "country": "Turkey",
+    "DateCountryDeclaredPolioFree": 1998,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SY",
+    "country": "Syria",
+    "DateCountryDeclaredPolioFree": 1998,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "VN",
+    "country": "Vietnam",
+    "DateCountryDeclaredPolioFree": 1997,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "IR",
+    "country": "Iran",
+    "DateCountryDeclaredPolioFree": 1997,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TH",
+    "country": "Thailand",
+    "DateCountryDeclaredPolioFree": 1997,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MG",
+    "country": "Madagascar",
+    "DateCountryDeclaredPolioFree": 1997,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "KH",
+    "country": "Cambodia",
+    "DateCountryDeclaredPolioFree": 1997,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TJ",
+    "country": "Tajikistan",
+    "DateCountryDeclaredPolioFree": 1997,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "RU",
+    "country": "Russia",
+    "DateCountryDeclaredPolioFree": 1996,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MM",
+    "country": "Myanmar",
+    "DateCountryDeclaredPolioFree": 1996,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "UG",
+    "country": "Uganda",
+    "DateCountryDeclaredPolioFree": 1996,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "UA",
+    "country": "Ukraine",
+    "DateCountryDeclaredPolioFree": 1996,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "KP",
+    "country": "North Korea",
+    "DateCountryDeclaredPolioFree": 1996,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "LA",
+    "country": "Laos",
+    "DateCountryDeclaredPolioFree": 1996,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TM",
+    "country": "Turkmenistan",
+    "DateCountryDeclaredPolioFree": 1996,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MD",
+    "country": "Moldova",
+    "DateCountryDeclaredPolioFree": 1996,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GA",
+    "country": "Gabon",
+    "DateCountryDeclaredPolioFree": 1996,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "ID",
+    "country": "Indonesia",
+    "DateCountryDeclaredPolioFree": 1995,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "UZ",
+    "country": "Uzbekistan",
+    "DateCountryDeclaredPolioFree": 1995,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SA",
+    "country": "Saudi Arabia",
+    "DateCountryDeclaredPolioFree": 1995,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "ZM",
+    "country": "Zambia",
+    "DateCountryDeclaredPolioFree": 1995,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "KZ",
+    "country": "Kazakhstan",
+    "DateCountryDeclaredPolioFree": 1995,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AZ",
+    "country": "Azerbaijan",
+    "DateCountryDeclaredPolioFree": 1995,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "NA",
+    "country": "Namibia",
+    "DateCountryDeclaredPolioFree": 1995,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AM",
+    "country": "Armenia",
+    "DateCountryDeclaredPolioFree": 1995,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CY",
+    "country": "Cyprus",
+    "DateCountryDeclaredPolioFree": 1995,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CN",
+    "country": "China",
+    "DateCountryDeclaredPolioFree": 1994,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TN",
+    "country": "Tunisia",
+    "DateCountryDeclaredPolioFree": 1994,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BY",
+    "country": "Belarus",
+    "DateCountryDeclaredPolioFree": 1994,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "LB",
+    "country": "Lebanon",
+    "DateCountryDeclaredPolioFree": 1994,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "PH",
+    "country": "Philippines",
+    "DateCountryDeclaredPolioFree": 1993,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MZ",
+    "country": "Mozambique",
+    "DateCountryDeclaredPolioFree": 1993,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "LK",
+    "country": "Sri Lanka",
+    "DateCountryDeclaredPolioFree": 1993,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "OM",
+    "country": "Oman",
+    "DateCountryDeclaredPolioFree": 1993,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MN",
+    "country": "Mongolia",
+    "DateCountryDeclaredPolioFree": 1993,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BA",
+    "country": "Bosnia and Herzegovina",
+    "DateCountryDeclaredPolioFree": 1993,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MK",
+    "country": "North Macedonia",
+    "DateCountryDeclaredPolioFree": 1993,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BH",
+    "country": "Bahrain",
+    "DateCountryDeclaredPolioFree": 1993,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "RO",
+    "country": "Romania",
+    "DateCountryDeclaredPolioFree": 1992,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AE",
+    "country": "United Arab Emirates",
+    "DateCountryDeclaredPolioFree": 1992,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "KG",
+    "country": "Kyrgyzstan",
+    "DateCountryDeclaredPolioFree": 1992,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "LV",
+    "country": "Latvia",
+    "DateCountryDeclaredPolioFree": 1992,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CO",
+    "country": "Colombia",
+    "DateCountryDeclaredPolioFree": 1991,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "PE",
+    "country": "Peru",
+    "DateCountryDeclaredPolioFree": 1991,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "ZW",
+    "country": "Zimbabwe",
+    "DateCountryDeclaredPolioFree": 1991,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "LY",
+    "country": "Libya",
+    "DateCountryDeclaredPolioFree": 1991,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GE",
+    "country": "Georgia",
+    "DateCountryDeclaredPolioFree": 1991,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MX",
+    "country": "Mexico",
+    "DateCountryDeclaredPolioFree": 1990,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "DE",
+    "country": "Germany",
+    "DateCountryDeclaredPolioFree": 1990,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GT",
+    "country": "Guatemala",
+    "DateCountryDeclaredPolioFree": 1990,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "EC",
+    "country": "Ecuador",
+    "DateCountryDeclaredPolioFree": 1990,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "HR",
+    "country": "Croatia",
+    "DateCountryDeclaredPolioFree": 1990,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "QA",
+    "country": "Qatar",
+    "DateCountryDeclaredPolioFree": 1990,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BR",
+    "country": "Brazil",
+    "DateCountryDeclaredPolioFree": 1989,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "FR",
+    "country": "France",
+    "DateCountryDeclaredPolioFree": 1989,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "ZA",
+    "country": "South Africa",
+    "DateCountryDeclaredPolioFree": 1989,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MA",
+    "country": "Morocco",
+    "DateCountryDeclaredPolioFree": 1989,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "VE",
+    "country": "Venezuela",
+    "DateCountryDeclaredPolioFree": 1989,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BO",
+    "country": "Bolivia",
+    "DateCountryDeclaredPolioFree": 1989,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "HT",
+    "country": "Haiti",
+    "DateCountryDeclaredPolioFree": 1989,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "HN",
+    "country": "Honduras",
+    "DateCountryDeclaredPolioFree": 1989,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SZ",
+    "country": "Eswatini",
+    "DateCountryDeclaredPolioFree": 1989,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "VU",
+    "country": "Vanuatu",
+    "DateCountryDeclaredPolioFree": 1989,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "KE",
+    "country": "Kenya",
+    "DateCountryDeclaredPolioFree": 1988,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "ES",
+    "country": "Spain",
+    "DateCountryDeclaredPolioFree": 1988,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "JO",
+    "country": "Jordan",
+    "DateCountryDeclaredPolioFree": 1988,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "IL",
+    "country": "Israel",
+    "DateCountryDeclaredPolioFree": 1988,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CV",
+    "country": "Cape Verde",
+    "DateCountryDeclaredPolioFree": 1988,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SV",
+    "country": "El Salvador",
+    "DateCountryDeclaredPolioFree": 1987,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "LS",
+    "country": "Lesotho",
+    "DateCountryDeclaredPolioFree": 1987,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MY",
+    "country": "Malaysia",
+    "DateCountryDeclaredPolioFree": 1986,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "PT",
+    "country": "Portugal",
+    "DateCountryDeclaredPolioFree": 1986,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BT",
+    "country": "Bhutan",
+    "DateCountryDeclaredPolioFree": 1986,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "DO",
+    "country": "Dominican Republic",
+    "DateCountryDeclaredPolioFree": 1985,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "PY",
+    "country": "Paraguay",
+    "DateCountryDeclaredPolioFree": 1985,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "KW",
+    "country": "Kuwait",
+    "DateCountryDeclaredPolioFree": 1985,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AR",
+    "country": "Argentina",
+    "DateCountryDeclaredPolioFree": 1984,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "PL",
+    "country": "Poland",
+    "DateCountryDeclaredPolioFree": 1984,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TL",
+    "country": "Timor-Leste",
+    "DateCountryDeclaredPolioFree": 1984,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "HK",
+    "country": "Hong Kong",
+    "DateCountryDeclaredPolioFree": 1983,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "KM",
+    "country": "Comoros",
+    "DateCountryDeclaredPolioFree": 1983,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "ST",
+    "country": "Sao Tome and Principe",
+    "DateCountryDeclaredPolioFree": 1983,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "IT",
+    "country": "Italy",
+    "DateCountryDeclaredPolioFree": 1982,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GR",
+    "country": "Greece",
+    "DateCountryDeclaredPolioFree": 1982,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CH",
+    "country": "Switzerland",
+    "DateCountryDeclaredPolioFree": 1982,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BG",
+    "country": "Bulgaria",
+    "DateCountryDeclaredPolioFree": 1982,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "JM",
+    "country": "Jamaica",
+    "DateCountryDeclaredPolioFree": 1982,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SR",
+    "country": "Suriname",
+    "DateCountryDeclaredPolioFree": 1982,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "NC",
+    "country": "New Caledonia",
+    "DateCountryDeclaredPolioFree": 1982,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "PF",
+    "country": "French Polynesia",
+    "DateCountryDeclaredPolioFree": 1982,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TO",
+    "country": "Tonga",
+    "DateCountryDeclaredPolioFree": 1982,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SM",
+    "country": "San Marino",
+    "DateCountryDeclaredPolioFree": 1982,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "NI",
+    "country": "Nicaragua",
+    "DateCountryDeclaredPolioFree": 1981,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BZ",
+    "country": "Belize",
+    "DateCountryDeclaredPolioFree": 1981,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "JP",
+    "country": "Japan",
+    "DateCountryDeclaredPolioFree": 1980,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AT",
+    "country": "Austria",
+    "DateCountryDeclaredPolioFree": 1980,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MU",
+    "country": "Mauritius",
+    "DateCountryDeclaredPolioFree": 1980,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MV",
+    "country": "Maldives",
+    "DateCountryDeclaredPolioFree": 1980,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SC",
+    "country": "Seychelles",
+    "DateCountryDeclaredPolioFree": 1980,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "DM",
+    "country": "Dominica",
+    "DateCountryDeclaredPolioFree": 1980,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "US",
+    "country": "United States",
+    "DateCountryDeclaredPolioFree": 1979,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CA",
+    "country": "Canada",
+    "DateCountryDeclaredPolioFree": 1979,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BE",
+    "country": "Belgium",
+    "DateCountryDeclaredPolioFree": 1979,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SG",
+    "country": "Singapore",
+    "DateCountryDeclaredPolioFree": 1978,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "UY",
+    "country": "Uruguay",
+    "DateCountryDeclaredPolioFree": 1978,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AL",
+    "country": "Albania",
+    "DateCountryDeclaredPolioFree": 1978,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SI",
+    "country": "Slovenia",
+    "DateCountryDeclaredPolioFree": 1978,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BN",
+    "country": "Brunei",
+    "DateCountryDeclaredPolioFree": 1978,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SE",
+    "country": "Sweden",
+    "DateCountryDeclaredPolioFree": 1977,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "VC",
+    "country": "Saint Vincent and the Grenadines",
+    "DateCountryDeclaredPolioFree": 1977,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TC",
+    "country": "Turks and Caicos Islands",
+    "DateCountryDeclaredPolioFree": 1977,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "DK",
+    "country": "Denmark",
+    "DateCountryDeclaredPolioFree": 1976,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MH",
+    "country": "Marshall Islands",
+    "DateCountryDeclaredPolioFree": 1976,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MS",
+    "country": "Montserrat",
+    "DateCountryDeclaredPolioFree": 1976,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CL",
+    "country": "Chile",
+    "DateCountryDeclaredPolioFree": 1975,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MO",
+    "country": "Macau",
+    "DateCountryDeclaredPolioFree": 1975,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "PR",
+    "country": "Puerto Rico",
+    "DateCountryDeclaredPolioFree": 1974,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AU",
+    "country": "Australia",
+    "DateCountryDeclaredPolioFree": 1972,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CR",
+    "country": "Costa Rica",
+    "DateCountryDeclaredPolioFree": 1972,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "PA",
+    "country": "Panama",
+    "DateCountryDeclaredPolioFree": 1972,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TT",
+    "country": "Trinidad and Tobago",
+    "DateCountryDeclaredPolioFree": 1972,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SB",
+    "country": "Solomon Islands",
+    "DateCountryDeclaredPolioFree": 1972,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "WF",
+    "country": "Wallis and Futuna",
+    "DateCountryDeclaredPolioFree": 1972,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "LT",
+    "country": "Lithuania",
+    "DateCountryDeclaredPolioFree": 1971,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "LC",
+    "country": "Saint Lucia",
+    "DateCountryDeclaredPolioFree": 1970,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GD",
+    "country": "Grenada",
+    "DateCountryDeclaredPolioFree": 1970,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "FM",
+    "country": "Micronesia",
+    "DateCountryDeclaredPolioFree": 1970,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "HU",
+    "country": "Hungary",
+    "DateCountryDeclaredPolioFree": 1969,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "NO",
+    "country": "Norway",
+    "DateCountryDeclaredPolioFree": 1969,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "KN",
+    "country": "Saint Kitts and Nevis",
+    "DateCountryDeclaredPolioFree": 1969,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BS",
+    "country": "Bahamas",
+    "DateCountryDeclaredPolioFree": 1967,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "BB",
+    "country": "Barbados",
+    "DateCountryDeclaredPolioFree": 1967,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "IE",
+    "country": "Ireland",
+    "DateCountryDeclaredPolioFree": 1965,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AG",
+    "country": "Antigua and Barbuda",
+    "DateCountryDeclaredPolioFree": 1965,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MT",
+    "country": "Malta",
+    "DateCountryDeclaredPolioFree": 1964,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GU",
+    "country": "Guam",
+    "DateCountryDeclaredPolioFree": 1964,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MC",
+    "country": "Monaco",
+    "DateCountryDeclaredPolioFree": 1964,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "LU",
+    "country": "Luxembourg",
+    "DateCountryDeclaredPolioFree": 1963,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CU",
+    "country": "Cuba",
+    "DateCountryDeclaredPolioFree": 1962,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "NZ",
+    "country": "New Zealand",
+    "DateCountryDeclaredPolioFree": 1962,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "FJ",
+    "country": "Fiji",
+    "DateCountryDeclaredPolioFree": 1962,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "GY",
+    "country": "Guyana",
+    "DateCountryDeclaredPolioFree": 1962,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AI",
+    "country": "Anguilla",
+    "DateCountryDeclaredPolioFree": 1962,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "EE",
+    "country": "Estonia",
+    "DateCountryDeclaredPolioFree": 1961,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "NL",
+    "country": "Netherlands",
+    "DateCountryDeclaredPolioFree": 1960,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CZ",
+    "country": "Czechia",
+    "DateCountryDeclaredPolioFree": 1960,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "SK",
+    "country": "Slovakia",
+    "DateCountryDeclaredPolioFree": 1960,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "IS",
+    "country": "Iceland",
+    "DateCountryDeclaredPolioFree": 1960,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "MP",
+    "country": "Northern Mariana Islands",
+    "DateCountryDeclaredPolioFree": 1960,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AD",
+    "country": "Andorra",
+    "DateCountryDeclaredPolioFree": 1959,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "CK",
+    "country": "Cook Islands",
+    "DateCountryDeclaredPolioFree": 1959,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "KY",
+    "country": "Cayman Islands",
+    "DateCountryDeclaredPolioFree": 1958,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "WS",
+    "country": "Samoa",
+    "DateCountryDeclaredPolioFree": 1950,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AS",
+    "country": "American Samoa",
+    "DateCountryDeclaredPolioFree": 1950,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TK",
+    "country": "Tokelau",
+    "DateCountryDeclaredPolioFree": 1950,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "NU",
+    "country": "Niue",
+    "DateCountryDeclaredPolioFree": 1950,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "PW",
+    "country": "Palau",
+    "DateCountryDeclaredPolioFree": 1940,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "TV",
+    "country": "Tuvalu",
+    "DateCountryDeclaredPolioFree": 1936,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "NR",
+    "country": "Nauru",
+    "DateCountryDeclaredPolioFree": 1910,
+    "WildPoliovirusCasesByCountry_2025": null
+  },
+  {
+    "flagCode": "AF",
+    "country": "Afghanistan",
+    "DateCountryDeclaredPolioFree": null,
+    "WildPoliovirusCasesByCountry_2025": 21
+  },
+  {
+    "flagCode": "PK",
+    "country": "Pakistan",
+    "DateCountryDeclaredPolioFree": null,
+    "WildPoliovirusCasesByCountry_2025": 31
+  }
+]

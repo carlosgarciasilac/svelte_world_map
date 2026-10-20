@@ -2,26 +2,20 @@ import { describe, expect, it } from "vitest";
 import { countries, formatGdp } from "./country-gdp";
 
 describe("world GDP data", () => {
-  it("includes major economies and exposes the 2010 GDP values", () => {
-    expect(countries.some((country) => country.id === "usa")).toBe(true);
-    expect(countries.some((country) => country.id === "china")).toBe(true);
-    expect(countries.some((country) => country.id === "germany")).toBe(true);
-    expect(countries.find((country) => country.id === "usa")?.gdp)
+  it("uses lowercase ISO2 ids and exposes 2020 GDP values", () => {
+    expect(countries.some((country) => country.id === "us")).toBe(true);
+    expect(countries.some((country) => country.id === "cn")).toBe(true);
+    expect(countries.some((country) => country.id === "de")).toBe(true);
+    expect(countries.find((country) => country.id === "us")?.gdp)
       .toBeGreaterThan(10_000_000_000_000);
   });
 
-  it("includes SVG-derived countries and keeps missing GDP entries at zero", () => {
-    expect(countries.some((country) => country.gdp === 0)).toBe(true);
-    expect(
-      countries.some((country) =>
-        country.id === "canada" && country.gdp === 1_610_000_000_000
-      ),
-    ).toBe(true);
-    expect(
-      countries.some((country) =>
-        country.name === "United States" && country.path.length > 0
-      ),
-    ).toBe(true);
+  it("keeps polio fields and uses null for missing GDP", () => {
+    const pakistan = countries.find((country) => country.id === "pk");
+    expect(pakistan?.name).toBe("Pakistan");
+    expect(pakistan?.WildPoliovirusCasesByCountry_2025).toBe(31);
+    expect(pakistan?.DateCountryDeclaredPolioFree).toBeNull();
+    expect(countries.find((country) => country.id === "kp")?.gdp).toBeNull();
   });
 
   it("formats values for readable GDP labels", () => {

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { countries, formatGdp } from '$lib/country-gdp';
-	import polioEradicationData from '$lib/polio_eradication_data.json';
+	import polioEradicationData from '$lib/countries-with-polio-2026.json';
 	import World from '$lib/world.svelte';
 
 	type CountrySelectDetail = {
@@ -8,11 +8,23 @@
 		name: string;
 	};
 
-	const polioByCountry = polioEradicationData as Record<string, string | null>;
+	type PolioCountryRecord = {
+		flagCode: string;
+		country: string;
+		DateCountryDeclaredPolioFree: number | null;
+		WildPoliovirusCasesByCountry_2025: number | null;
+	};
+
+	const polioByCountry = new Map(
+		(polioEradicationData as PolioCountryRecord[]).map((entry) => [entry.country, entry])
+	);
 	const POLIO_NAME_ALIASES: Record<string, string> = {
-		'United Kingdom': 'The United Kingdom',
-		'Congo': 'Republic of Congo',
-		'Macedonia': 'Macedonia'
+		'The United Kingdom': 'United Kingdom',
+		'United Kingdom': 'United Kingdom',
+		'Congo': 'Republic of the Congo',
+		'Republic of Congo': 'Republic of the Congo',
+		'Macedonia': 'North Macedonia',
+		'North Macedonia': 'North Macedonia'
 	};
 
 	let selectedId = $state<string | null>(null);
@@ -21,33 +33,28 @@
 
 	function getPolioStatus(countryName: string): string {
 		const lookupName = POLIO_NAME_ALIASES[countryName] ?? countryName;
-		const value = polioByCountry[lookupName];
+		const record = polioByCountry.get(lookupName) ?? null;
 
-		if (value === null || value === undefined) {
+		if (record?.WildPoliovirusCasesByCountry_2025 !== null && record?.WildPoliovirusCasesByCountry_2025 !== undefined) {
+			const caseCount = record.WildPoliovirusCasesByCountry_2025;
+			if (caseCount !== null && caseCount > 0) {
+				return 'Eradication is ongoing';
+			}
+		}
+
+		if (record?.DateCountryDeclaredPolioFree === null || record?.DateCountryDeclaredPolioFree === undefined) {
 			return 'No eradication year available';
 		}
 
-		if (value === 'ongoing') {
-			return 'Eradication is ongoing';
-		}
-
-		if (value === 'data not available' || value === 'data_not_available') {
-			return 'Eradication year not available';
-		}
-
-		if (value === 'pre 1985') {
-			return 'Eradicated before 1985';
-		}
-
-		return `Eradicated in ${value}`;
+		return `Eradicated in ${record.DateCountryDeclaredPolioFree}`;
 	}
 
 	function toggleCountry(countryId: string) {
 		selectedId = selectedId === countryId ? null : countryId;
 	}
 
-	function handleCountrySelect(event: CustomEvent<CountrySelectDetail>) {
-		toggleCountry(event.detail.id);
+	function handleCountrySelect(detail: CountrySelectDetail) {
+		toggleCountry(detail.id);
 	}
 </script>
 
@@ -58,12 +65,12 @@
 <div class="page">
 	<header class="header">
 		<p class="eyebrow">Interactive world economy</p>
-		<h1>2010 GDP by country</h1>
+		<h1>2020 GDP by country</h1>
 	</header>
 
 	<div class="layout">
 		<div class="map-panel">
-			<World on:countryselect={handleCountrySelect}></World>
+			<World onCountrySelect={handleCountrySelect}></World>
 		</div>
 
 		<aside class="sidebar">
@@ -72,13 +79,17 @@
 				<div class="country-card">
 					<span class="label">Country</span>
 					<h3>{activeCountry.name}</h3>
-					<p class="gdp">{formatGdp(activeCountry.gdp)}</p>
-					<p class="note">2010 nominal GDP</p>
+					{#if activeCountry.gdp !== null}
+						<p class="gdp">{formatGdp(activeCountry.gdp)}</p>
+					{:else}
+						<p class="gdp">GDP not available</p>
+					{/if}
+					<p class="note">2020 nominal GDP</p>
 					<p class="polio-status">{activePolioStatus}</p>
 				</div>
 			{:else}
 				<div class="country-card empty">
-					<p>Click any country to reveal its 2010 GDP and polio eradication status.</p>
+					<p>Click any country to reveal its 2020 GDP and polio eradication status.</p>
 				</div>
 			{/if}
 		</aside>
