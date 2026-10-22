@@ -1,6 +1,13 @@
 <script lang="ts">
 	import { countries, formatGdp } from '$lib/country-gdp';
 	import polioEradicationData from '$lib/countries-with-polio-2026.json';
+	import {
+		applyGuess,
+		createRound,
+		ongoingTargets,
+		roundScore,
+		type RoundState
+	} from '$lib/polio-game';
 	import World from '$lib/world.svelte';
 
 	type CountrySelectDetail = {
@@ -27,9 +34,13 @@
 		'North Macedonia': 'North Macedonia'
 	};
 
-	let selectedId = $state<string | null>(null);
-	const activeCountry = $derived(countries.find((country) => country.id === selectedId) ?? null);
-	const activePolioStatus = $derived(activeCountry ? getPolioStatus(activeCountry.name) : null);
+	let round = $state<RoundState>(createRound());
+	const winner = $derived(countries.find((country) => country.id === round.winnerId) ?? null);
+	const winnerPolioStatus = $derived(winner ? getPolioStatus(winner.name) : null);
+	const score = $derived(roundScore(round));
+	const lastMessage = $derived(getLastMessage(round));
+	const lastCountry = $derived(countries.find((country) => country.id === round.lastGuess?.countryId) ?? null);
+	const lastCountryPolioStatus = $derived(lastCountry ? getPolioStatus(lastCountry.name) : null);
 
 	function getPolioStatus(countryName: string): string {
 		const lookupName = POLIO_NAME_ALIASES[countryName] ?? countryName;
@@ -49,12 +60,38 @@
 		return `Eradicated in ${record.DateCountryDeclaredPolioFree}`;
 	}
 
-	function toggleCountry(countryId: string) {
-		selectedId = selectedId === countryId ? null : countryId;
+	function getCountryName(countryId: string): string {
+		return countries.find((country) => country.id === countryId)?.name ?? countryId;
+	}
+
+	function getLastMessage(state: RoundState): string | null {
+		const guess = state.lastGuess;
+		if (!guess) {
+			return null;
+		}
+
+		const name = getCountryName(guess.countryId);
+
+		switch (guess.result) {
+			case 'hit':
+				return `${name} still has wild polio cases. Target found!`;
+			case 'miss':
+				return `${name} is not an active target. Attempts left: ${state.attemptsLeft}.`;
+			case 'bonus':
+				return `${name} was declared polio-free within the last 10 years. +1 attempt, no cost.`;
+			case 'repeat':
+				return `You already tried ${name}.`;
+			case 'ignored':
+				return "That country isn't part of this game.";
+		}
 	}
 
 	function handleCountrySelect(detail: CountrySelectDetail) {
-		toggleCountry(detail.id);
+		round = applyGuess(round, detail.id);
+	}
+
+	function startNewRound() {
+		round = createRound();
 	}
 </script>
 
@@ -66,6 +103,10 @@
 	<header class="header">
 		<p class="eyebrow">how are we doing with polio eradication?</p>
 		<h1>Countries and Polio Eradication Status</h1>
+		<p class="note">
+			Click a country on the map. Countries declared polio-free within the last 10 years give you an
+			extra attempt.
+		</p>
 	</header>
 
 	<div class="layout">
@@ -74,29 +115,61 @@
 		</div>
 
 		<aside class="sidebar">
-			<h2>Selected country</h2>
-			{#if activeCountry}
+			{#if round.status === 'playing'}
+				<h2>Find a country with ongoing polio eradication</h2>
 				<div class="country-card">
-					<span class="label">Country</span>
-					<h3>{activeCountry.name}</h3>
-					{#if activeCountry.gdp !== null}
-						<p class="gdp">{formatGdp(activeCountry.gdp)}</p>
+					<span class="label">Attempts left</span>
+					<p class="score">{round.attemptsLeft}</p>
+					{#if lastMessage}
+						<p class="polio-status">{lastMessage}</p>
+					{/if}
+					{#if lastCountry}
+						<h3>{lastCountry.name}</h3>
+						<p class="polio-status">{lastCountryPolioStatus}</p>
+					{/if}
+				</div>
+			{:else if round.status === 'won' && winner}
+				<h2>Round won</h2>
+				<div class="country-card">
+					<span class="label">Score</span>
+					<p class="score">{score}</p>
+					<p class="note">{round.attemptsLeft} attempts left × 100, capped at 500</p>
+					<h3>{winner.name}</h3>
+					{#if winner.gdp !== null}
+						<p class="gdp">{formatGdp(winner.gdp)}</p>
 					{:else}
 						<p class="gdp">GDP not available</p>
 					{/if}
 					<p class="note">2020 nominal GDP</p>
-					<p class="polio-status">{activePolioStatus}</p>
+					<p class="polio-status">{winnerPolioStatus}</p>
 				</div>
 			{:else}
-				<div class="country-card empty">
-					<p>Click any country to reveal its polio eradication status.</p>
+				<h2>Round lost</h2>
+				<div class="country-card">
+					<span class="label">Score</span>
+					<p class="score">{score}</p>
+					<p class="note">Out of attempts. Countries still reporting wild polio cases in 2025:</p>
+					<ul class="targets">
+						{#each ongoingTargets as target (target.id)}
+							<li>{target.name}</li>
+						{/each}
+					</ul>
 				</div>
 			{/if}
+
+			<button type="button" class="new-round" onclick={startNewRound}>New round</button>
 		</aside>
 	</div>
 </div>
 
 <style>
+	:global(body) {
+		margin: 0;
+		font-family: Inter, 'Segoe UI', sans-serif;
+		background: #020817;
+		color: #e2e8f0;
+	}
+
 	.page {
 		min-height: 100vh;
 		padding: 2rem;
@@ -180,7 +253,8 @@
 		font-size: 1.6rem;
 	}
 
-	.gdp {
+	.gdp,
+	.score {
 		margin: 0;
 		font-size: 1.9rem;
 		font-weight: 700;
@@ -198,12 +272,31 @@
 		color: #bae6fd;
 	}
 
-	.empty {
-		min-height: 150px;
-		display: grid;
-		place-items: center;
-		text-align: center;
-		color: #cbd5e1;
+	.targets {
+		margin: 0.5rem 0 0;
+		padding-left: 1.2rem;
+		color: #bae6fd;
+	}
+
+	.new-round {
+		margin-top: 1rem;
+		width: 100%;
+		padding: 0.7rem 1rem;
+		border: 1px solid rgba(125, 211, 252, 0.4);
+		border-radius: 0.75rem;
+		background: rgba(14, 116, 144, 0.35);
+		color: #e0f2fe;
+		font: inherit;
+		cursor: pointer;
+	}
+
+	.new-round:hover {
+		background: rgba(14, 116, 144, 0.55);
+	}
+
+	.new-round:focus-visible {
+		outline: 2px solid rgba(125, 211, 252, 0.75);
+		outline-offset: 2px;
 	}
 
 	@media (max-width: 820px) {
